@@ -14,7 +14,7 @@
 // -----------------------------------------------------------------------------
 
 import Foundation
-#if canImport(Dispatch)
+#if canImport(Dispatch) && !os(WASI)
 import Dispatch
 fileprivate var knownTypesQueue =
     DispatchQueue(label: "org.swift.protobuf.typeRegistry",
